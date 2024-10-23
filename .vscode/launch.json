@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(gdb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/out/jp2_poc",
+      "args": ["/home/ec2-user/environment/libvips/jp2/y1980-25.jp2"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build",
+      "miDebuggerPath": "/usr/bin/gdb", // Path to gdb on your system
+      "logging": {
+        "trace": true,
+        "traceResponse": true
+      }
+    }
+  ]
+}

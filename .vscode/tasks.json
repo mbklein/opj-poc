@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${workspaceFolder}/src/main.c", // Replace with the correct source file path
+        "-I/home/ec2-user/environment/openjpeg/src/lib/openjp2", // Include directory
+        "-I/home/ec2-user/environment/openjpeg/build/src/lib/openjp2", // Another include directory
+        "-L/home/ec2-user/environment/openjpeg/build/bin", // Path to OpenJPEG library
+        "-lopenjp2", // Link to OpenJPEG library
+        "-o",
+        "${workspaceFolder}/out/jp2_poc" // Output binary path
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build using OpenJPEG paths"
+    }
+  ]
+}

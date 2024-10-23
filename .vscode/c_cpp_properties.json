@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/usr/local/include", // or wherever OpenJPEG headers are installed
+        "/home/ec2-user/environment/openjpeg/src/lib/openjp2",
+        "/home/ec2-user/environment/openjpeg/build/src/lib/openjp2"
+      ],
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "linux-gcc-x64",
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "/usr/local/include",
+          "/home/ec2-user/environment/openjpeg/src/lib/openjp2",
+          "/home/ec2-user/environment/openjpeg/build/src/lib/openjp2"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    }
+  ],
+  "version": 4
+}
