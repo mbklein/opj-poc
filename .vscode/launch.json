@@ -2,11 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "(lldb) Launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/out/jp2_poc",
+      "args": ["/Users/mbk836/Downloads/jp2/notworking.jp2"],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build"
+    },
+    {
       "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/out/jp2_poc",
-      "args": ["/home/ec2-user/environment/libvips/jp2/y1980-25.jp2"],
+      "args": ["/Users/mbk836/Downloads/jp2/notworking.jp2"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
@@ -20,7 +29,7 @@
         }
       ],
       "preLaunchTask": "build",
-      "miDebuggerPath": "/usr/bin/gdb", // Path to gdb on your system
+      "miDebuggerPath": "/usr/bin/lldb", // Path to gdb on your system
       "logging": {
         "trace": true,
         "traceResponse": true

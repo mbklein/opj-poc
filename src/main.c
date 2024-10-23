@@ -93,7 +93,8 @@ int main(int argc, char *argv[])
         printf("Decoding tile %d...\n", tile_index);
         if (!opj_get_decoded_tile(codec, stream, image, tile_index))
         {
-            fprintf(stderr, "Failed to decode tile %d\n", tile_index);
+            fprintf(stderr, "Failed to decode tile %d. Quitting.\n", tile_index);
+            break;
         }
         else
         {
